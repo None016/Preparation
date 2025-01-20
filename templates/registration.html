@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statick/css/registration.css">
+  <title>Регистрация</title>
+</head>
+<body>
+<main>
+  <button onclick="showForm()" id="regaut">Регистрация</button>
+<form action="" id="reg" class="active form-container">
+    <div>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span>
+    </div>
+
+    <div>
+       <label for="firstName">Имя:</label><br>
+       <input type="text" id="firstName" name="firstName" required>
+       <span id="firstNameError" class="error"></span>
+    </div>
+
+    <div>
+        <label for="lastName">Фамилия:</label><br>
+        <input type="text" id="lastName" name="lastName" required>
+        <span id="lastNameError" class="error"></span>
+    </div>
+
+  <div>
+    <label for="age">Возраст:</label><br>
+    <input type="number" id="age" name="age" min="0" required>
+    <div>
+        <label>Пол:</label><br>
+        <input type="radio" id="male" name="gender" value="male" required>
+        <label for="male">Мужской</label><br>
+        <input type="radio" id="female" name="gender" value="female" required>
+        <label for="female">Женский</label>
+        <span id="genderError" class="error"></span>
+      </div>
+    
+      <div>
+        <label for="password">Пароль:</label><br>
+        <input type="password" id="password" name="password" required>
+        <span id="passwordError" class="error"></span>
+      </div>
+    
+      <div>
+        <label for="passwordConfirm">Повтор пароля:</label><br>
+        <input type="password" id="passwordConfirm" name="passwordConfirm" required>
+        <span id="passwordConfirmError" class="error"></span>
+      </div>
+      
+      <div class="get_foto">
+        <label for="photo">Выберите фотографию:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
+    
+      <div class="consent">
+        <input type="checkbox" id="consent" name="consent" required>
+        <label for="consent">Согласие на обработку персональных данных</label>
+        <span id="consentError" class="error"></span>
+      </div>
+    
+      <div>
+        <button id="reg_button" type="submit">Зарегистрироваться</button>
+      </div>
+    </div>
+</form>
+<form action="" id="aut" class="form-container">
+    <div>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required>
+        <span id="emailError" class="error"></span>
+    </div>
+    <div>
+      <label for="password">Пароль:</label><br>
+      <input type="password" id="password" name="password" required>
+      <span id="passwordError" class="error"></span>
+    </div>
+    <div>
+      <button id="reg_button" type="submit">Войти</button>
+    </div>
+</form>
+</main>
+    <script src="../statick/js/regisration.js"></script>
+
+</body>
+</html>

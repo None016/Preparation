@@ -1,0 +1,30 @@
+body{
+    all: unset;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-size: 60pt;
+    margin: 10pt;
+}
+
+h2{
+    font-size: 24pt;
+}
+
+a{
+    font-size: 18pt;
+    all: unset;
+    cursor: pointer;
+}
+
+a:hover{
+    color: #ff009d;
+}
