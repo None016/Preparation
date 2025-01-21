@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statick/css/account.css">
+    <title>Личный кабинет</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">Логотип</a>
+        </div>
+        <div class="menu">
+            <!-- <a href="../templates/registration.html">Вход/Регистрация</a> -->
+            <a href="../templates/competition.html">Расписание</a>
+            <a href="">Личный кабинет</a>
+            <a href="../templates/competition.html">Конкурс</a>
+        </div>
+    </header>
+    <main>
+        <section class="form">
+            <img src="../statick/img/family.jpeg" alt="">
+            <h2>Имя</h2>
+            <h2>Фамилия</h2>
+            <button>Выйти</button>
+        </section>
+        <section class="sign_up">
+            <h3>Записаца на конкурс можно в этой форме</h3>
+            <label for="contest">Выберите конкурс: </label>
+            <select name="" id="contest">
+                <option value="">Конкурс1</option>
+                <option value="">Конкурс2</option>
+                <option value="">Конкурс3</option>
+                <option value="">Конкурс4</option>
+                <option value="">Конкурс5</option>
+            </select>
+            <br>
+            <label for="date">Выберите дату: </label>
+            <input type="date" id="date" value="2024-08-08" min="2024-08-08" max="2024-08-08"> <!--????????????-->
+            <aside>       
+                <div class="time">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <h3>12:00-13:00</h3>
+                    <h4>48уч.</h4>
+                </div>
+                <div class="time">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <h3>13:00-14:00</h3>
+                    <h4>48уч.</h4>
+                </div>
+                <div class="time">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                    <h3>14:00-15:00</h3>
+                    <h4>48уч.</h4>
+                </div>
+            </aside>
+        </section>
+    </main>
+</body>
+</html>
