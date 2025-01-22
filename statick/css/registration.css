@@ -37,7 +37,7 @@ input{
 #reg_button, #regaut{
     all: unset;
     width: 100%;
-    background-color: #ff009d;
+    background-color: #8c00ff;
     border-radius: 5px;
     text-align: center;
     font-size: 21pt;
@@ -68,7 +68,7 @@ label{
 }
 
 #male:checked, #female:checked, #consent:checked{
-    background-color: #ff009d;
+    background-color: #8c00ff;
 }
 
 #regaut{

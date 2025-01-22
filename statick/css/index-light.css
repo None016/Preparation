@@ -1,12 +1,12 @@
 :root {
-    --color_text: #ffffff;
-    --back_color: #000000;
-}
-
-:root[theme="dark"] {
     --color_text: #000;
     --back_color: #fff;
 
+}
+
+:root[theme="dark"] {
+    --color_text: #ffffff;
+    --back_color: #000000;
 }
 
 body {
