@@ -7,17 +7,30 @@
     <title>Личный кабинет</title>
 </head>
 <body>
-    <header>
+    <header class="header_desktop">
         <div class="logo">
             <a href="index.html">Логотип</a>
         </div>
         <div class="menu">
-            <!-- <a href="../templates/registration.html">Вход/Регистрация</a> -->
+            <a href="../templates/registration.html">Вход/Регистрация</a>
             <a href="../templates/schedule.html">Расписание</a>
             <a href="../templates/account.html">Личный кабинет</a>
             <a href="../templates/competition.html">Конкурс</a>
         </div>
     </header>
+    <header class="header_mobail">
+        <div class="logo">
+            <a href="index.html">Логотип</a>
+        </div>
+        <button class="dropbtn" onclick="open_menu()">Меню</button>
+    </header>
+    <div id="dropdown">
+        <a href="../templates/registration.html">Вход/Регистрация</a>
+        <a href="../templates/schedule.html">Расписание</a>
+        <a href="../templates/account.html">Личный кабинет</a>
+        <a href="../templates/competition.html">Конкурс</a>
+    </div>
+
     <main>
         <section class="form">
             <img src="../statick/img/family.jpeg" alt="">
@@ -66,5 +79,6 @@
             </aside>
         </section>
     </main>
+    <script src="../statick/js/index.js"></script>
 </body>
 </html>

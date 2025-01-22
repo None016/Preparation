@@ -7,7 +7,7 @@
     <title>Конкурсы</title>
 </head>
 <body>
-    <header>
+    <header class="header_desktop">
         <div class="logo">
             <a href="index.html">Логотип</a>
         </div>
@@ -17,16 +17,31 @@
             <a href="../templates/account.html">Личный кабинет</a>
             <a href="../templates/competition.html">Конкурс</a>
         </div>
+        <label class="switch">
+            <input type="checkbox" id="theme1">
+            <span class="slider round"></span>
+        </label>
     </header>
+    <header class="header_mobail">
+        <div class="logo">
+            <a href="index.html">Логотип</a>
+        </div>
+        <button class="dropbtn" onclick="open_menu()">Меню</button>
+    </header>
+    <div id="dropdown">
+        <a href="../templates/registration.html">Вход/Регистрация</a>
+        <a href="../templates/schedule.html">Расписание</a>
+        <a href="../templates/account.html">Личный кабинет</a>
+        <a href="../templates/competition.html">Конкурс</a>
+    </div>
+
     <main>
         <h1>Описание конкурсов</h1>
         <p>Прикольные конкурсы, представленные на нашем сайте, станут находкой для любого праздника.</p>
     </main>
     <div class="blackout">
         <section>
-            <div>
-                <img class="main_img" src="../statick/img/1.jpg" alt="">
-            </div>
+            <img class="main_img" src="../statick/img/1.jpg" alt="">
             <div class="description">
                 <h2>Название конкурса</h2>
                 <div class="statistics">
@@ -46,10 +61,10 @@
                 </div>
                 <p>Описание конкурса: Описание конкурсаОписание конкурсаОписание конкурсаОписание конкурса</p>
             </div>
-            <div>
-                <img class="main_img" src="../statick/img/2.jpg" alt="">
-            </div>
+            <img class="main_img" src="../statick/img/2.jpg" alt="">
+
         </section>  
     </div>  
+    <script src="../statick/js/menu.js"></script>
 </body>
 </html>

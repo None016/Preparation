@@ -20,6 +20,34 @@ header {
     align-items: center;
     justify-content: space-around;
 }
+
+#dropdown{
+    display: none;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#dropdown a{
+    font-size: 16pt;
+    display: block;
+    margin: 20px 0;
+    text-align: center;
+    color: #000;
+}
+
+.dropbtn{
+    font-size: 16pt;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+}
+
+.header_mobail{
+    display: none;
+}
+
   
 .menu a { 
     margin: 5px;
@@ -136,4 +164,51 @@ section{
     margin-top: 5px;
 }
 
+@media (max-width: 450px) {
+    .header_desktop{
+        display: none;
+    }
+
+    .header_mobail{
+        display: flex;
+    }
+
+    .about{
+        flex-direction: column;
+    }
+
+    .about img{
+        height: auto;
+        width: 100%;
+    }
+
+    body{
+        background-size:auto 100%;
+    }
+
+    .hero h1{
+        font-size: 28pt;
+    }
+
+    .hero p{
+        font-size: 18pt;
+    }
+
+    p{
+        font-size: 16pt;
+    }
+
+    button{
+        animation: none;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    .blackout p{
+        font-size: 18pt;
+        text-align: center;
+    }
+}
   

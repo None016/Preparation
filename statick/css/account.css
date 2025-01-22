@@ -20,6 +20,47 @@ header {
   justify-content: space-around;
 }
 
+.header_mobail{
+  display: none;
+}
+
+#dropdown{
+  display: none;
+  padding: 10px;
+}
+
+#dropdown a{
+  font-size: 16pt;
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  color: #000;
+}
+
+.dropbtn{
+  font-size: 16pt;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #000;
+  color: #fff;
+}
+
+#dropdown{
+  display: none;
+  background-color: #fff;
+  padding: 10px;
+}
+
+#dropdown a{
+  font-size: 16pt;
+  display: block;
+  margin: 20px 0;
+  text-align: center;
+  color: #000;
+}
+
+
 .menu a {
   margin: 5px;
   font-size: 14pt;
@@ -62,7 +103,7 @@ main{
 section{
   margin-top: 20px;
   background-color: #fff;
-  width: 400px;
+  width: 360px;
   border-radius: 10px;
   padding: 10px;
 }
@@ -179,4 +220,64 @@ input:checked + .slider:before {
 .time h3, h4{
     font-size: 12pt;
     margin: 5px 10px;
+}
+
+@media (max-width: 450px){
+  .header_desktop{
+    display: none;
+  }
+
+  .header_mobail{
+      display: flex;
+  }
+
+  .about{
+      flex-direction: column;
+  }
+
+  .about img{
+      height: auto;
+      width: 100%;
+  }
+
+  .hero{
+      background-size:auto 100%;
+  }
+
+  .hero h1{
+      font-size: 28pt;
+  }
+
+  .hero p{
+      font-size: 18pt;
+  }
+
+  p{
+      font-size: 16pt;
+  }
+
+  h3{
+    font-size: 18pt;
+  }
+
+  label{
+    font-size: 14pt;
+  }
+
+  select, input{
+    font-size: 14pt;
+  }
+
+  input{
+    margin-top: 10px;
+  }
+
+  .time{
+    margin: 10px, auto;
+  }
+
+  .time h3{
+    font-size: 16pt;
+  }
+
 }
