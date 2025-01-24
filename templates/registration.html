@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../statick/css/registration.css">
+    <link rel="icon" href="../statick/img/logo.png">
   <title>Регистрация</title>
 </head>
 <body>
 <main>
-  <button onclick="showForm()" id="regaut">Регистрация</button>
+  <div class="regaut">
+    <button onclick="reg()" id="reg_bt">Регистрация</button>
+    <button onclick="aut()" id="aut_bt">Авторизация</button>
+  </div>
 <form action="" id="reg" class="active form-container">
     <div>
         <label for="email">E-mail:</label><br>
@@ -71,18 +75,21 @@
 <form action="" id="aut" class="form-container">
     <div>
         <label for="email">E-mail:</label><br>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email_aut" name="email" required>
         <span id="emailError" class="error"></span>
     </div>
     <div>
       <label for="password">Пароль:</label><br>
-      <input type="password" id="password" name="password" required>
+      <input type="password" id="password_aut" name="password" required>
       <span id="passwordError" class="error"></span>
+      <a href="#">Забыл пароль</a>
     </div>
     <div>
-      <button id="reg_button" type="submit">Войти</button>
+      <button id="aut_button" type="submit">Войти</button>
     </div>
 </form>
+<div id="people-container"></div>
+<button id="add-person">Добавить человека</button>
 </main>
     <script src="../statick/js/regisration.js"></script>
 

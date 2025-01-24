@@ -1,3 +1,11 @@
+:root {
+    --color_text: #000;
+    --back_color: #fff;
+    --back_color_reviews: #ffffff;
+    --maessage_color: #bce2fc;
+  }
+  
+
 body{
     all: unset;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -8,13 +16,65 @@ body{
 }
 
 a {
-    color: #000;
+    color: #ffffff;
     text-decoration: none;
 }
+
+.logo a{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+    margin-right: 10px;
+}
+
+.cont{
+    display: flex;
+    align-items: center;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+}
+
+.search button{
+    all: unset;
+    cursor: pointer;
+    background-color: var(--back_color);
+    color: var(--color_text);
+    border-radius: 5px;
+    height: 20px;
+    margin: 0 5px;
+    padding: 2px 5px;
+}
+
+.search input{
+    height: 20px;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+#dropdown .search input{
+    height: auto;
+    font-size: 14pt;
+    padding: 5px;
+    width: 100%;
+}
+
+#dropdown .search button{
+    height: 100%;
+    font-size: 16pt;
+    border: 1px solid #000;
+}
+
   
 header {
     height: 50px;
-    background-color: #fff;
+    background-color: #000000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     display: flex;
     align-items: center;
@@ -67,7 +127,7 @@ header {
 
 @keyframes transfusion {
     0% {
-        color: #000;
+        color: #fff;
     }
     100% {
         color: #ff009d;

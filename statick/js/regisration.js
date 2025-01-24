@@ -1,6 +1,45 @@
 const form = document.getElementById('registrationForm');
 const messageDiv = document.getElementById('message');
 
+
+const peopleContainer = document.getElementById('people-container');
+const addPersonButton = document.getElementById('add-person');
+let personCount = 0;
+
+addPersonButton.addEventListener('click', () => {
+  personCount++;
+  
+  peopleContainer.style.display = "block"
+  const personContainer = document.createElement('div');
+  personContainer.classList.add('person-container');
+  personContainer.innerHTML = `
+    <label for="name-${personCount}">Имя:</label>
+    <input type="text" id="nam-${personCount}" name="name-${personCount}">
+    
+    <label for="surname-${personCount}">Фамилия</label>
+    <input type="text" id="surname-${personCount}" name="surname-${personCount}"> 
+
+    <label for="age-${personCount}">Возраст:</label>
+    <input type="number" id="age-${personCount}" name="age-${personCount}" min="0" required>
+
+    <label for="gender-${personCount}">Пол:</label>
+    <select id="gender-${personCount}" name="gender-${personCount}">
+      <option value="man">Мужской</option>
+      <option value="woman">Женский</option>
+      <option value="uncertain">Чехословатский</option>
+    </select> <br>
+    
+    <button type="button" class="remove-person">Удалить</button>
+  `;
+
+  peopleContainer.appendChild(personContainer);
+
+  const removeButton = personContainer.querySelector('.remove-person');
+  removeButton.addEventListener('click', () => {
+    peopleContainer.removeChild(personContainer);
+  });
+});
+
     
 form.addEventListener('submit', (event) => {
       event.preventDefault();
@@ -89,24 +128,20 @@ form.addEventListener('submit', (event) => {
 
 var isreg = true;
 const button_reg_aut = document.getElementById("regaut");
-button_reg_aut.style.backgroundColor("#888");
 
-function showForm() {
+function reg(){
+  document.getElementById('add-person').style.display = "block";
+  document.getElementById('people-container').style.display = "block";
   document.getElementById('aut').classList.remove('active');
   document.getElementById('reg').classList.remove('active');
-
-  if (isreg){
-    console.log("1");
-    document.getElementById('reg').classList.add('active');
-    document.getElementById("regaut").innerHTML = "Регистрация";
-  }else{
-    console.log("2");
-    document.getElementById('aut').classList.add('active');
-    document.getElementById("regaut").innerHTML = "Авторизация";
-  }
-
-  isreg = !isreg
-
+  document.getElementById('reg').classList.add('active');
 }
 
-showForm("aut");
+function aut(){
+  document.getElementById('add-person').style.display = "none";
+  document.getElementById('people-container').style.display = "none";
+  document.getElementById('aut').classList.remove('active');
+  document.getElementById('reg').classList.remove('active');
+  document.getElementById('aut').classList.add('active');
+}
+
