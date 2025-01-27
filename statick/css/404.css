@@ -28,3 +28,7 @@ a{
 a:hover{
     color: #ff009d;
 }
+
+image{
+    height: 100px;
+}

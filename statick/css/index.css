@@ -200,7 +200,7 @@ input:checked + .slider:before {
     border-radius: 50%;
 }
 
-.hero {
+.hero, .mailing_list{
     height: calc(100vh - 50px);
     box-sizing: border-box;
     background-image: url(../img/space.jpg);
@@ -291,6 +291,31 @@ input:checked + .slider:before {
     font-size: 16pt;
 }
 
+
+.text_for_about_us{
+    padding: 20px;
+    display: flex;
+    background-color: var(--back_color);
+    color: var(--color_text);
+}
+
+.text_for_about_us img{
+    height: 100%;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.text_for_about_us div{
+    padding: 10px;
+    font-size: 16pt;
+}
+
+.text_for_about_us h2{
+    text-align: left;
+}
+
+
+
 .about_us{
     display: flex;
     align-items: center;
@@ -336,7 +361,16 @@ input:checked + .slider:before {
     transition: transform 0.2s;
 }
 
+.slide a{
+    color: #d198ff;
+}
+
+.slide data{
+    font-size: 8pt;
+}
+
 .reviews {
+    padding: 80px 0;
     position: relative;
     /* margin: auto; */
     overflow: hidden;
@@ -348,11 +382,6 @@ input:checked + .slider:before {
     transition: transform 0.5s ease;
   }
   
-/* .slide {
-    background-color: beige;
-    min-width: 100%;
-    box-sizing: border-box;
-} */
 
 button.prev, button.next {
     position: absolute;
@@ -380,6 +409,7 @@ button.next {
     background-color: var(--back_color);
     color: var(--color_text);
     justify-content: space-between;
+    object-fit: fill;
 }
 
 .organizers div{
@@ -391,6 +421,59 @@ button.next {
 .organizers p, .organizers ul{
     font-size: 16pt;
 }
+
+.mailing_list form{
+    box-sizing: border-box;
+    background-color: var(--back_color_reviews);
+    color: var(--color_text);
+    width: 300px;
+    font-size: 16pt;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.mailing_list input:not(#agreement){
+    box-sizing: border-box;
+    background-color: var(--maessage_color);
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.mailing_list input::placeholder{
+    color: #ccc;
+}
+
+.mailing_list h3{
+    font-size: 18pt;
+    margin: 10px 0;
+}
+
+.mailing_list label{
+    font-size: 14pt;
+    text-align: left;
+}
+
+.mailing_list button{
+    width: 100%;
+    font-size: 14pt;
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    color: var(--back_color);
+    background-color: var(--color_text);
+    border-radius: 10px;
+}
+
+.mailing_list button:hover{
+    background-color: #8c00ff;
+    animation-name: btn_anim;
+    animation-duration: 500ms;
+    animation-timing-function: ease;
+    color: #fff;
+}
+
 
 footer {
     background-color: var(--back_color);
@@ -407,7 +490,34 @@ footer {
     }
 }
 
+@keyframes btn_anim{
+    0%{
+        color: var(--back_color);
+        background-color: var(--color_text);
+    }
+    100%{
+        background-color: #8c00ff;
+        color: #fff;
+    }
+}
+
+@media(max-width: 1200px) {
+    .organizers{
+        flex-direction: column;
+    }
+
+    .organizers img{
+        width: auto;
+        height: 700px;
+        object-fit: contain;
+    }
+}
+
 @media (max-width: 450px) {
+    .text_for_about_us{
+        flex-direction: column;
+    }
+
     .header_desktop{
         display: none;
     }
@@ -451,5 +561,24 @@ footer {
 
     p{
         font-size: 16pt;
+    }
+
+    .slide{
+        box-sizing: border-box;
+        min-width: 250px;
+    }
+
+    .slide p{
+        font-size: 12pt;
+    }
+
+    .slides{
+        box-sizing: border-box;
+        width: 270px;
+    }
+
+    button.prev, button.next{
+        height: 100px;
+        width: 50px;
     }
 }
